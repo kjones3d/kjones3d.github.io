@@ -13,13 +13,19 @@
     </script>
   </head>
   <body>
-    <div class="webgl-content">
+    <div class="w3-content w3-container">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
         <div class="title">flappy</div>
       </div>
+    </div>
+
+    <div class="w3-content w3-container" id="about">
+      <p>This is an example of an Endless Runner game.</p>
+      <p>We begin by completing the Flappy Bird tutorial from Unity. This gives us the knowledge to use sprite sheets and to use basic animations and animation controllers. This also shows us best practices for endless games as well as basic object pooling.</p>
+      <p>Then, we use that knowledge combined with what we learned from the Maze game to create a player that can move left and right as well as jump. We repurpose the object pooling system to shoot projectiles at the player that must be avoided.
     </div>
   </body>
 </html>
