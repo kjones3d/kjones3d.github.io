@@ -147,8 +147,9 @@ body, html {
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+  <!-- Header for Animation section of Portfolio -->
+  <h3 class="w3-center">ANIMATION</h3>
+  <p class="w3-center"><em>This is the animation section of my portfolio.<br> Click on the images to view the video.</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
@@ -169,13 +170,17 @@ body, html {
     </div>
   </div>
 
+  <!-- Header for Video Game section of Portfolio -->
+  <h3 class="w3-center">VIDEO GAME DESIGN</h3>
+  <p class="w3-center"><em>This is the video game design section of my portfolio.<br> Click on the images to play the games and learn about what we learn from that game.</em></p><br>
+
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
-      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+      <a href="unity-games/ufoMaze/ufoMaze.html"><img src="images/thumbs/mazeThumb.png" style="width:100%" class="w3-hover-opacity" alt="2D Maze game"></a>
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+      <a href="unity-games/runner/runner.html"><img src="images/thumbs/runnerThumb.png" style="width:100%" class="w3-hover-opacity" alt="Endless Runner 2D game"></a>
     </div>
 
     <div class="w3-col m3">
@@ -185,7 +190,7 @@ body, html {
     <div class="w3-col m3">
       <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
     </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+    <!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
   </div>
 </div>
 
