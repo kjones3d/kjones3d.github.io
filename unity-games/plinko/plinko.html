@@ -4,29 +4,32 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Kevin Jones | ePortfolio | Plinko</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://kit.fontawesome.com/0700d7c1e9.js" crossorigin=""></script>
-  <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-    body, html {
-      height: 100%;
-      color: #777;
-      line-height: 1.8;
-    }
-    </style>
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../css/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/runner.json", {onProgress: UnityProgress});
-    </script>
+    <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="../../index.html" class="w3-bar-item w3-button">HOME</a>
+        <a href="../../index.html#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+        <a href="../../index.html#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+        <a href="../../index.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="../../index.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="../../index.html#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+        <a href="../../index.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+
+      </div>
+    </div>
+    <div class="webgl-content w3-content w3-container">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
@@ -35,21 +38,28 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
+      
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Plinko</div>
       </div>
     </div>
+  </div>
+  <div class="w3-content w3-container" id="about">
+    <p>This is an example of a Plinko game.</p>
+    <p>This project starts from scratch using only Unity primitives. This starts us into 3D game development and getting to know 3D space. Specifically, learning how to place objects in specific places, creating objects in a game using Instanciate(), using Physics Materials, as well as referencing and passing information to external scripts.</p>
+    <p>There are many ways to improve upon this project, such as more detailed materials, adding feedback to the player when a disk scores points or even more advanced camera work. </p>
+  </div>
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/plinko.loader.js";
       var config = {
-        dataUrl: buildUrl + "/plinko.data.gz",
-        frameworkUrl: buildUrl + "/plinko.framework.js.gz",
-        codeUrl: buildUrl + "/plinko.wasm.gz",
+        dataUrl: buildUrl + "/plinko.data",
+        frameworkUrl: buildUrl + "/plinko.framework.js",
+        codeUrl: buildUrl + "/plinko.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
+        companyName: "SCUC Byron Steele VGD",
         productName: "Plinko",
         productVersion: "0.1",
       };
@@ -64,7 +74,7 @@
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
       } else {
-        canvas.style.width = "400px";
+        canvas.style.width = "600px";
         canvas.style.height = "800px";
       }
       loadingBar.style.display = "block";
