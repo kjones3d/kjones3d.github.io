@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-     <!-- Navbar (sit on top) -->
+	  <!-- Navbar (sit on top) -->
     <div class="w3-top">
       <div class="w3-bar" id="myNavbar">
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
@@ -45,7 +45,7 @@
     </div>
     <div class="webgl-content w3-content w3-container">
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <center><canvas id="unity-canvas" width=480 height=640 tabindex="-1"></canvas></center>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -58,10 +58,10 @@
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Froggier</div>
       </div>
-		<div class="w3-content w3-container" id="about">
-        <p>This is an example of a Frogger-clone game.</p>
-        <p>The student begins with pre-made assets, but has to build the frog character. This game builds upon skills learned in previous games in the course, but specifically introduces Unity's animation system.</p>
-        <p>Students are expected to program the frog moving in all directions, create and implement a jumping animation as well as implement the various death animations. We also have to add movement to the various cars and river obstacles and recycle them. Some ways to continue development are to add a life system, scoring, progressing to new levels, create a timer, etc.</p>
+		 <div class="w3-content w3-container" id="about">
+        <p>This is an example of a Plinko game.</p>
+        <p>This project starts from scratch using only Unity primitives. This starts us into 3D game development and getting to know 3D space. Specifically, learning how to place objects in specific places, creating objects in a game using Instanciate(), using Physics Materials, as well as referencing and passing information to external scripts.</p>
+        <p>There are many ways to improve upon this project, such as more detailed materials, adding feedback to the player when a disk scores points or even more advanced camera work. </p>
       </div>
     </div>
 	  </div>
@@ -136,8 +136,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "480px";
+        canvas.style.height = "640px";
       }
 
       loadingBar.style.display = "block";
