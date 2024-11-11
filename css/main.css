@@ -4,3 +4,15 @@
 #myNavbar {
   color: black;
 }
+.socialList {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.social-li {
+	list-style-image: url("../images/socials/iconmonstr-linkedin-3.svg")
+}
+.social-insta {
+		list-style-image: url("../images/socials/iconmonstr-instagram-13.svg")
+}
