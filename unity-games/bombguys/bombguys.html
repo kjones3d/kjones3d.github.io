@@ -3,13 +3,49 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | JigSaw</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <title>Kevin Jones | ePortfolio | BombGuys</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0700d7c1e9.js" crossorigin=""></script>
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    body, html {
+      height: 100%;
+      color: #777;
+      line-height: 1.8;
+    }
+    </style>
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+	  <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="../../index.html" class="w3-bar-item w3-button">HOME</a>
+        <a href="../../index.html#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+        <a href="../../index.html#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+        <a href="../../index.html#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="../../index.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="../../index.html#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+        <a href="../../index.html#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+
+      </div>
+    </div>
+    <div class="webgl-content w3-content w3-container">
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <center><canvas id="unity-canvas" width=480 height=640 tabindex="-1"></canvas></center>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,9 +56,17 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">JigSaw</div>
+        <div id="unity-build-title">BombGuys</div>
+      </div>
+		 <div class="w3-content w3-container" id="about">
+        <p>This is a remake of Bomberman.</p>
+        <p>I taught a basic version of this game in my Video Game Programming class. I personally took that basic version and added a lot more to it. I added the ability to choose from 4 characters, added a small variety of powerups and half-implemented up to four players to play a game. Currently, if you choose to play with more than 2 players, the players will load with their chosen avatars, but there are no controls mapped to players 3 and 4.</p>
+        <p>If/when I revisit this project, I'll add in the ability to play with game pads and flesh out the map(s).</p>
       </div>
     </div>
+	  </div>
+	  <!-- Footer -->
+
     <script>
 
       var container = document.querySelector("#unity-container");
@@ -57,15 +101,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/puzzle.loader.js";
+      var loaderUrl = buildUrl + "/bombguys.loader.js";
       var config = {
-        dataUrl: buildUrl + "/puzzle.data",
-        frameworkUrl: buildUrl + "/puzzle.framework.js",
-        codeUrl: buildUrl + "/puzzle.wasm",
+        dataUrl: buildUrl + "/bombguys.data",
+        frameworkUrl: buildUrl + "/bombguys.framework.js",
+        codeUrl: buildUrl + "/bombguys.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "JigSaw",
-        productVersion: "1.0",
+        productName: "BombPerson",
+        productVersion: "0.1",
         showBanner: unityShowBanner,
       };
 
